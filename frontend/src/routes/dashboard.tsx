@@ -2,7 +2,7 @@ import { createFileRoute, Link, Outlet } from '@tanstack/react-router'
 import { Tabs, TabsList, TabsTrigger } from '../components/ui/tabs'
 
 const tabs = [
-  { label: 'Aperçu', path: '/dashboard' },
+  { label: 'Aperçu', path: '/dashboard/overview' },
   { label: 'Auteurs', path: '/dashboard/authors' },
   { label: 'Poèmes', path: '/dashboard/poems' },
 ]
@@ -14,7 +14,7 @@ export const Route = createFileRoute('/dashboard')({
 function DashboardLayout() {
   return (
     <div className="container py-6 space-y-6">
-      <Tabs defaultValue="/dashboard" className="w-full">
+      <Tabs defaultValue="/dashboard/overview" className="w-full">
         <TabsList>
           {tabs.map((tab) => (
             <TabsTrigger key={tab.path} value={tab.path} asChild>

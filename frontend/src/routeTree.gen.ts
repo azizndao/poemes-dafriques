@@ -17,6 +17,7 @@ import { Route as IndexImport } from './routes/index'
 import { Route as AuthorsIndexImport } from './routes/authors/index'
 import { Route as PoemsPoemIdImport } from './routes/poems/$poemId'
 import { Route as DashboardPoemsImport } from './routes/dashboard.poems'
+import { Route as DashboardOverviewImport } from './routes/dashboard.overview'
 import { Route as DashboardAuthorsImport } from './routes/dashboard.authors'
 import { Route as AuthorsAuthorIdImport } from './routes/authors/$authorId'
 
@@ -55,6 +56,12 @@ const PoemsPoemIdRoute = PoemsPoemIdImport.update({
 const DashboardPoemsRoute = DashboardPoemsImport.update({
   id: '/poems',
   path: '/poems',
+  getParentRoute: () => DashboardRoute,
+} as any)
+
+const DashboardOverviewRoute = DashboardOverviewImport.update({
+  id: '/overview',
+  path: '/overview',
   getParentRoute: () => DashboardRoute,
 } as any)
 
@@ -109,6 +116,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardAuthorsImport
       parentRoute: typeof DashboardImport
     }
+    '/dashboard/overview': {
+      id: '/dashboard/overview'
+      path: '/overview'
+      fullPath: '/dashboard/overview'
+      preLoaderRoute: typeof DashboardOverviewImport
+      parentRoute: typeof DashboardImport
+    }
     '/dashboard/poems': {
       id: '/dashboard/poems'
       path: '/poems'
@@ -137,11 +151,13 @@ declare module '@tanstack/react-router' {
 
 interface DashboardRouteChildren {
   DashboardAuthorsRoute: typeof DashboardAuthorsRoute
+  DashboardOverviewRoute: typeof DashboardOverviewRoute
   DashboardPoemsRoute: typeof DashboardPoemsRoute
 }
 
 const DashboardRouteChildren: DashboardRouteChildren = {
   DashboardAuthorsRoute: DashboardAuthorsRoute,
+  DashboardOverviewRoute: DashboardOverviewRoute,
   DashboardPoemsRoute: DashboardPoemsRoute,
 }
 
@@ -155,6 +171,7 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof DashboardRouteWithChildren
   '/authors/$authorId': typeof AuthorsAuthorIdRoute
   '/dashboard/authors': typeof DashboardAuthorsRoute
+  '/dashboard/overview': typeof DashboardOverviewRoute
   '/dashboard/poems': typeof DashboardPoemsRoute
   '/poems/$poemId': typeof PoemsPoemIdRoute
   '/authors': typeof AuthorsIndexRoute
@@ -166,6 +183,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof DashboardRouteWithChildren
   '/authors/$authorId': typeof AuthorsAuthorIdRoute
   '/dashboard/authors': typeof DashboardAuthorsRoute
+  '/dashboard/overview': typeof DashboardOverviewRoute
   '/dashboard/poems': typeof DashboardPoemsRoute
   '/poems/$poemId': typeof PoemsPoemIdRoute
   '/authors': typeof AuthorsIndexRoute
@@ -178,6 +196,7 @@ export interface FileRoutesById {
   '/dashboard': typeof DashboardRouteWithChildren
   '/authors/$authorId': typeof AuthorsAuthorIdRoute
   '/dashboard/authors': typeof DashboardAuthorsRoute
+  '/dashboard/overview': typeof DashboardOverviewRoute
   '/dashboard/poems': typeof DashboardPoemsRoute
   '/poems/$poemId': typeof PoemsPoemIdRoute
   '/authors/': typeof AuthorsIndexRoute
@@ -191,6 +210,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/authors/$authorId'
     | '/dashboard/authors'
+    | '/dashboard/overview'
     | '/dashboard/poems'
     | '/poems/$poemId'
     | '/authors'
@@ -201,6 +221,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/authors/$authorId'
     | '/dashboard/authors'
+    | '/dashboard/overview'
     | '/dashboard/poems'
     | '/poems/$poemId'
     | '/authors'
@@ -211,6 +232,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/authors/$authorId'
     | '/dashboard/authors'
+    | '/dashboard/overview'
     | '/dashboard/poems'
     | '/poems/$poemId'
     | '/authors/'
@@ -263,6 +285,7 @@ export const routeTree = rootRoute
       "filePath": "dashboard.tsx",
       "children": [
         "/dashboard/authors",
+        "/dashboard/overview",
         "/dashboard/poems"
       ]
     },
@@ -271,6 +294,10 @@ export const routeTree = rootRoute
     },
     "/dashboard/authors": {
       "filePath": "dashboard.authors.tsx",
+      "parent": "/dashboard"
+    },
+    "/dashboard/overview": {
+      "filePath": "dashboard.overview.tsx",
       "parent": "/dashboard"
     },
     "/dashboard/poems": {

@@ -49,7 +49,7 @@ export default function RootComponent() {
               </div>
             </div>
             <Link
-                  to="/dashboard"
+                  to="/dashboard/overview"
                   className="ml-auto text-muted-foreground hover:text-foreground transition-colors"
                   activeProps={{
                     className: 'text-primary font-medium'

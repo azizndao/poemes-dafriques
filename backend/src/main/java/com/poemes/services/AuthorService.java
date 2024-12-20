@@ -8,10 +8,6 @@ import org.springframework.stereotype.Service;
 import com.poemes.models.Author;
 import com.poemes.repositories.AuthorRepository;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 @Service
 public class AuthorService {
 
