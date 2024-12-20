@@ -1,0 +1,147 @@
+[
+    {
+        "id": 1,
+        "first_name": "Léopold",
+        "last_name": "Sédar Senghor"
+    },
+    {
+        "id": 2,
+        "first_name": "Birago",
+        "last_name": "Diop"
+    },
+    {
+        "id": 3,
+        "first_name": "Amadou",
+        "last_name": "Hampâté Bâ"
+    },
+    {
+        "id": 4,
+        "first_name": "Bernard",
+        "last_name": "Dadié"
+    },
+    {
+        "id": 5,
+        "first_name": "Mongo",
+        "last_name": "Betzi"
+    },
+    {
+        "id": 6,
+        "first_name": "Cheikh",
+        "last_name": "Anta Diop"
+    },
+    {
+        "id": 7,
+        "first_name": "David",
+        "last_name": "Diop"
+    },
+    {
+        "id": 8,
+        "first_name": "Ousmane",
+        "last_name": "Sembène"
+    },
+    {
+        "id": 9,
+        "first_name": "Yambo",
+        "last_name": "Ouologuem"
+    },
+    {
+        "id": 10,
+        "first_name": "Aminata",
+        "last_name": "Sow Fall"
+    },
+    {
+        "id": 11,
+        "first_name": "Chinua",
+        "last_name": "Achebe"
+    },
+    {
+        "id": 12,
+        "first_name": "Wole",
+        "last_name": "Soyinka"
+    },
+    {
+        "id": 13,
+        "first_name": "Ngũgĩ",
+        "last_name": "wa Thiong'o"
+    },
+    {
+        "id": 14,
+        "first_name": "Nadine",
+        "last_name": "Gordimer"
+    },
+    {
+        "id": 15,
+        "first_name": "Buchi",
+        "last_name": "Emecheta"
+    },
+    {
+        "id": 16,
+        "first_name": "Ben",
+        "last_name": "Okri"
+    },
+    {
+        "id": 17,
+        "first_name": "Tsitsi",
+        "last_name": "Dangarembga"
+    },
+    {
+        "id": 18,
+        "first_name": "Nuruddin",
+        "last_name": "Farah"
+    },
+    {
+        "id": 19,
+        "first_name": "Mia",
+        "last_name": "Couto"
+    },
+    {
+        "id": 20,
+        "first_name": "Henri",
+        "last_name": "Lopes"
+    },
+    {
+        "id": 21,
+        "first_name": "Mariama",
+        "last_name": "Bâ"
+    },
+    {
+        "id": 22,
+        "first_name": "Tayeb",
+        "last_name": "Salih"
+    },
+    {
+        "id": 23,
+        "first_name": "Naguib",
+        "last_name": "Mahfouz"
+    },
+    {
+        "id": 24,
+        "first_name": "Assia",
+        "last_name": "Djebar"
+    },
+    {
+        "id": 25,
+        "first_name": "Chimamanda",
+        "last_name": "Ngozi Adichie"
+    },
+    {
+        "id": 26,
+        "first_name": "Teju",
+        "last_name": "Cole"
+    },
+    {
+        "id": 27,
+        "first_name": "Dinaw",
+        "last_name": "Mengestu"
+    },
+    {
+        "id": 28,
+        "first_name": "Bessie",
+        "last_name": "Head"
+    },
+    {
+        "id": 29,
+        "first_name": "J.M.",
+        "last_name": "Coetzee"
+    }
+]

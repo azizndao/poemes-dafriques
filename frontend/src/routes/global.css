@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+
+    /* Purple-based primary colors */
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 20% 98%;
+
+    /* Card styles */
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+
+    /* Popover styles */
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+
+    /* Softer secondary colors */
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+
+    /* Muted tones */
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    /* Accent colors - light purple */
+    --accent: 262 83% 96%;
+    --accent-foreground: 262 83% 28%;
+
+    /* Destructive colors - warm red */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* Border and input styles */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262 83% 58%;
+
+    /* Chart colors - vibrant palette */
+    --chart-1: 262 83% 58%; /* Purple */
+    --chart-2: 326 100% 74%; /* Pink */
+    --chart-3: 199 89% 48%; /* Blue */
+    --chart-4: 130 94% 45%; /* Green */
+    --chart-5: 47 95% 57%; /* Yellow */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+
+    /* Darker purple primary */
+    --primary: 263 70% 50%;
+    --primary-foreground: 210 20% 98%;
+
+    /* Card styles */
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+
+    /* Popover styles */
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+
+    /* Secondary colors */
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+
+    /* Muted tones */
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    /* Accent colors - darker purple */
+    --accent: 263 70% 16%;
+    --accent-foreground: 210 20% 98%;
+
+    /* Destructive colors */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* Border and input styles */
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263 70% 50%;
+
+    /* Chart colors - darker but still vibrant */
+    --chart-1: 263 70% 50%; /* Purple */
+    --chart-2: 326 80% 64%; /* Pink */
+    --chart-3: 199 79% 38%; /* Blue */
+    --chart-4: 130 84% 35%; /* Green */
+    --chart-5: 47 85% 47%; /* Yellow */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Additional utility classes for gradients and transitions */
+@layer utilities {
+  .hover-gradient {
+    @apply hover:bg-gradient-to-r hover:from-primary hover:to-primary/90 hover:text-primary-foreground transition-all duration-300;
+  }
+
+  .table-hover {
+    @apply hover:bg-accent/30 transition-colors duration-200;
+  }
+
+  .input-focus {
+    @apply focus-within:ring-2 focus-within:ring-primary/30 transition-shadow duration-200;
+  }
+}
+
+html {
+  color-scheme: light dark;
+}
