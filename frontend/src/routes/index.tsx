@@ -6,6 +6,7 @@ import HomeError from '../components/home/HomeError'
 import HomePending from '../components/home/HomePending'
 import { Button } from '../components/ui/button'
 import { Input } from '../components/ui/input'
+import { request } from '../lib/fetch'
 import { PoemCard } from './authors/$authorId'
 
 interface Poem {
@@ -29,7 +30,7 @@ export const Route = createFileRoute('/')({
 
 async function fetchPoems() {
   try {
-    const response = await fetch('http://localhost:8080/api/poems')
+    const response = await request('/poems')
     if (!response.ok) {
       throw new Error('Failed to fetch poems')
     }

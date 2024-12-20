@@ -2,13 +2,14 @@ import { createFileRoute } from '@tanstack/react-router'
 import { PoemsContent } from '../components/dashboard/poems/poems-content'
 import { PoemsError } from '../components/dashboard/poems/poems-error'
 import { PoemsLoading } from '../components/dashboard/poems/poems-loading'
-import type { Poem } from '../types/poem'
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
+import { request } from '../lib/fetch'
+import type { Poem } from '../types/poem'
 
 export const Route = createFileRoute('/dashboard/poems')({
   component: PoemsPage,
   loader: async () => {
-    const response = await fetch('http://localhost:8080/api/poems')
+    const response = await request('/poems')
     if (!response.ok) throw new Error('Failed to fetch poems')
     return response.json() as Promise<Poem[]>
   },

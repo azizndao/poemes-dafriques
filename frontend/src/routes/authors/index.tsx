@@ -12,6 +12,7 @@ import {
   CardTitle,
 } from '../../components/ui/card'
 import { Input } from '../../components/ui/input'
+import { request } from '../../lib/fetch'
 
 interface Author {
   id: number
@@ -26,7 +27,7 @@ export const Route = createFileRoute('/authors/')({
 
 async function fetchAuthors() {
   try {
-    const response = await fetch('http://localhost:8080/api/authors')
+    const response = await request('/authors')
     if (!response.ok) {
       throw new Error('Failed to fetch authors')
     }

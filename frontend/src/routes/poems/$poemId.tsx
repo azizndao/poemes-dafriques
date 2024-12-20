@@ -11,6 +11,7 @@ import {
   CardHeader,
 } from '../../components/ui/card'
 import { Skeleton } from '../../components/ui/skeleton'
+import { request } from '../../lib/fetch'
 import { cn } from '../../lib/utils'
 
 interface Poem {
@@ -34,7 +35,7 @@ export const Route = createFileRoute('/poems/$poemId')({
 
 async function fetchPoem(id: number) {
   try {
-    const response = await fetch(`http://localhost:8080/api/poems/${id}`)
+    const response = await request(`/poems/${id}`)
     if (!response.ok) {
       throw new Error('Failed to fetch poem')
     }

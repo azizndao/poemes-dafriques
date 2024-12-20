@@ -3,12 +3,13 @@ import { AuthorsContent } from '../components/dashboard/authors/authors-content'
 import { AuthorsError } from '../components/dashboard/authors/authors-error'
 import { AuthorsLoading } from '../components/dashboard/authors/authors-loading'
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card'
+import { request } from '../lib/fetch'
 import type { Author } from '../types/author'
 
 export const Route = createFileRoute('/dashboard/authors')({
   component: AuthorsPage,
   loader: async () => {
-    const response = await fetch('http://localhost:8080/api/authors')
+    const response = await request('/authors')
     if (!response.ok) throw new Error('Failed to fetch authors')
     return response.json() as Promise<Author[]>
   },

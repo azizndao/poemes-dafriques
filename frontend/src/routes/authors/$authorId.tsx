@@ -6,6 +6,7 @@ import { AnimatedGradient } from '../../components/ui/animated-gradient'
 import { Button } from '../../components/ui/button'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../../components/ui/card'
 import { Input } from '../../components/ui/input'
+import { request } from '../../lib/fetch'
 
 interface Author {
   id: number
@@ -30,8 +31,8 @@ export const Route = createFileRoute('/authors/$authorId')({
   loader: async ({ params }) => {
     try {
       const [authorRes, poemsRes] = await Promise.all([
-        fetch(`http://localhost:8080/api/authors/${params.authorId}`),
-        fetch(`http://localhost:8080/api/poems/author/${params.authorId}`)
+        request(`/authors/${params.authorId}`),
+        request(`/poems/author/${params.authorId}`)
       ])
       
       if (!authorRes.ok || !poemsRes.ok) {
