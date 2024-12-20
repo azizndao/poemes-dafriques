@@ -41,10 +41,10 @@ export function PoemsTable({ poems, onEdit }: PoemsTableProps) {
       <TableHeader>
         <TableRow>
           <TableHead className="w-[100px] text-center">Index</TableHead>
-          <TableHead>Title</TableHead>
-          <TableHead>Author</TableHead>
+          <TableHead>Titre</TableHead>
+          <TableHead>Auteur</TableHead>
           <TableHead>Date</TableHead>
-          <TableHead>Created</TableHead>
+          <TableHead>Créé</TableHead>
           <TableHead className="w-[100px]">Actions</TableHead>
         </TableRow>
       </TableHeader>
@@ -52,7 +52,7 @@ export function PoemsTable({ poems, onEdit }: PoemsTableProps) {
         {poems.length === 0 ? (
           <TableRow>
             <TableCell colSpan={5} className="text-center text-muted-foreground">
-              No poems found
+              Aucune poème trouvé
             </TableCell>
           </TableRow>
         ) : (

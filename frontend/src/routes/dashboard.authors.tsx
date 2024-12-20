@@ -24,7 +24,7 @@ function AuthorsPage() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Authors</CardTitle>
+            <CardTitle className="text-sm font-medium">Total des auteurs</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{authors.length}</div>
@@ -33,7 +33,7 @@ function AuthorsPage() {
         
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Added This Month</CardTitle>
+            <CardTitle className="text-sm font-medium">Ajoutés ce mois-ci</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
@@ -49,7 +49,7 @@ function AuthorsPage() {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Added Today</CardTitle>
+            <CardTitle className="text-sm font-medium">Ajoutés aujourd'hui</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">

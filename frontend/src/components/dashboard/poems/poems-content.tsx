@@ -32,16 +32,16 @@ export function PoemsContent({ poems }: PoemsContentProps) {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-4">
-        <h1 className="text-2xl font-bold">Poems</h1>
+        <h1 className="text-2xl font-bold">Poèmes</h1>
         <Input
-          placeholder="Search poems..."
+          placeholder="Rechercher des poèmes..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="ml-auto w-[300px]"
         />
         <Button onClick={() => setCreateDialogOpen(true)}>
           <Plus className="w-4 h-4 mr-2" />
-          Add Poem
+          Ajouter une poème
         </Button>
       </div>
 

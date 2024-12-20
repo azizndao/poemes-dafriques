@@ -5,9 +5,9 @@ export function PoemsError() {
   return (
     <Alert variant="destructive">
       <AlertCircle className="h-4 w-4" />
-      <AlertTitle>Error</AlertTitle>
+      <AlertTitle>Erreur</AlertTitle>
       <AlertDescription>
-        Failed to load poems. Please try again later.
+        Echec de chargement des poèmes. Veuillez réessayer plus tard.
       </AlertDescription>
     </Alert>
   )

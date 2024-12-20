@@ -20,7 +20,7 @@ export function AuthorsList({ authors }: AuthorsListProps) {
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Book className="h-4 w-4" />
-              <span>{author.poems.length} poems</span>
+              <span>{author.poems.length} poèmes</span>
             </div>
           </div>
           <div className="flex items-center gap-2">

@@ -24,7 +24,7 @@ function PoemsPage() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Total Poems</CardTitle>
+            <CardTitle className="text-sm font-medium">Total des poèmes</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{poems.length}</div>
@@ -33,7 +33,7 @@ function PoemsPage() {
         
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Published Today</CardTitle>
+            <CardTitle className="text-sm font-medium">Publiés aujourd'hui</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">
@@ -46,7 +46,7 @@ function PoemsPage() {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Average Length</CardTitle>
+            <CardTitle className="text-sm font-medium">Longueur moyenne</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">

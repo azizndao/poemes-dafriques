@@ -88,7 +88,7 @@ export function EditAuthorDialog({ author, open, onOpenChange }: EditAuthorDialo
               name="firstName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>First Name</FormLabel>
+                  <FormLabel>Prénom</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -102,7 +102,7 @@ export function EditAuthorDialog({ author, open, onOpenChange }: EditAuthorDialo
               name="lastName"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Last Name</FormLabel>
+                  <FormLabel>Nom</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>

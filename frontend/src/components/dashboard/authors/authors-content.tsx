@@ -29,16 +29,16 @@ export function AuthorsContent({ authors }: AuthorsContentProps) {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-4">
-        <h1 className="text-2xl font-bold">Authors</h1>
+        <h1 className="text-2xl font-bold">Auteurs</h1>
           <Input
-            placeholder="Search authors..."
+            placeholder="Rechercher des auteurs..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="ml-auto w-[300px]"
           />
         <Button onClick={() => setCreateDialogOpen(true)} >
           <Plus className="w-4 h-4 mr-2" />
-          Add Author
+          Ajouter un auteur
         </Button>
       </div>
 

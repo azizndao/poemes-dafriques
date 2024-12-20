@@ -42,9 +42,9 @@ export function AuthorsTable({ authors, onEdit }: AuthorsTableProps) {
         <TableRow>
           <TableHead className="w-[100px] text-center">Index</TableHead>
           <TableHead>Nom</TableHead>
-          <TableHead>Prenom</TableHead>
-          <TableHead>Poems</TableHead>
-          <TableHead>Created</TableHead>
+          <TableHead>Prénom</TableHead>
+          <TableHead>Poèmes</TableHead>
+          <TableHead>Créé</TableHead>
           <TableHead className="w-[100px]">Actions</TableHead>
         </TableRow>
       </TableHeader>
@@ -54,7 +54,7 @@ export function AuthorsTable({ authors, onEdit }: AuthorsTableProps) {
             <TableCell className='text-center font-medium'>{index + 1}</TableCell>
             <TableCell>{author.firstName}</TableCell>
             <TableCell>{author.lastName}</TableCell>
-            <TableCell>{author.poemCount} poems</TableCell>
+            <TableCell>{author.poemCount} poèmes</TableCell>
             <TableCell>
               {formatDate(author.createdAt)}
             </TableCell>

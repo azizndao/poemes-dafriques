@@ -5,4 +5,9 @@ export interface Author {
   poemCount: number
   createdAt: string
   updatedAt: string
+  poems: Array<{
+    id: number
+    title: string
+    date: string
+  }>
 }

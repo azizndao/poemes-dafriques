@@ -123,11 +123,11 @@ export function CreatePoemDialog({ open, onOpenChange }: CreatePoemDialogProps) 
               name="authorId"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Author</FormLabel>
+                  <FormLabel>Auteur</FormLabel>
                   <Select onValueChange={field.onChange} defaultValue={field.value}>
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select an author" />
+                        <SelectValue placeholder="Selectionner un auteur" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -158,7 +158,7 @@ export function CreatePoemDialog({ open, onOpenChange }: CreatePoemDialogProps) 
             />
 
             <Button type="submit" className="w-full">
-              Create Poem
+              Créer une poème
             </Button>
           </form>
         </Form>

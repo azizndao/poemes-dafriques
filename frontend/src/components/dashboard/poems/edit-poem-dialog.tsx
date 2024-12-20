@@ -112,7 +112,7 @@ export function EditPoemDialog({ poem, open, onOpenChange }: EditPoemDialogProps
               name="title"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Title</FormLabel>
+                  <FormLabel>Titre</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
@@ -126,7 +126,7 @@ export function EditPoemDialog({ poem, open, onOpenChange }: EditPoemDialogProps
               name="content"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Content</FormLabel>
+                  <FormLabel>Contenu</FormLabel>
                   <FormControl>
                     <Textarea {...field} />
                   </FormControl>
@@ -140,14 +140,14 @@ export function EditPoemDialog({ poem, open, onOpenChange }: EditPoemDialogProps
               name="author_id"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Author</FormLabel>
+                  <FormLabel>Auteur</FormLabel>
                   <Select 
                     onValueChange={field.onChange} 
                     defaultValue={field.value}
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select an author" />
+                        <SelectValue placeholder="Selectionner un auteur" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -186,9 +186,9 @@ export function EditPoemDialog({ poem, open, onOpenChange }: EditPoemDialogProps
                 variant="outline" 
                 onClick={() => onOpenChange(false)}
               >
-                Cancel
+                Annuler
               </Button>
-              <Button type="submit">Save Changes</Button>
+              <Button type="submit">Enregistrer les modifications</Button>
             </div>
           </form>
         </Form>
